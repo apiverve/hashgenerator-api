@@ -16,7 +16,7 @@ const api = new hashgeneratorAPI({
 // Example query
 var query = {
   text: "Hello World",
-  algorithms: "sha256,md5"
+  algorithms: "all"
 };
 
 // Make the API request using callback
