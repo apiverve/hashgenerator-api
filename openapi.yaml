@@ -1,40 +1,42 @@
 openapi: 3.0.4
 info:
   title: Hash Generator
-  description: Hash Generator is a tool for generating cryptographic hashes from text. It supports multiple algorithms including MD5, SHA-1, SHA-256, SHA-384, SHA-512, and BLAKE2 variants for data integrity and security applications.
+  description: >-
+    Hash Generator is a tool for generating cryptographic hashes from text. It
+    supports multiple algorithms including MD5, SHA-1, SHA-256, SHA-384,
+    SHA-512, and BLAKE2 variants for data integrity and security applications.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/hashgenerator:
     get:
       summary: Generate Hash
-      description: Hash Generator is a tool for generating cryptographic hashes from text. It supports multiple algorithms including MD5, SHA-1, SHA-256, SHA-384, SHA-512, and BLAKE2 variants for data integrity and security applications.
+      description: Generate cryptographic hashes using multiple algorithms
       operationId: hashgenerator
       parameters:
-      - name: text
-        in: query
-        schema:
-          type: string
-        required: true
-        description: Text to hash
-        example: Hello World
-      - name: algorithms
-        default: all
-        in: query
-        schema:
-          type: string
-        required: false
-        description: Comma-separated list of algorithms or 'all' (md5, sha1, sha256, sha384, sha512, blake2b512, blake2s256)
-        example: sha256,md5
+        - name: text
+          in: query
+          schema:
+            type: string
+          required: true
+          description: Text to hash
+          example: Hello World
+        - name: algorithms
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Comma-separated list of algorithms or 'all'
+          example: sha256,md5
       responses:
         '200':
           description: Successful Response
@@ -50,43 +52,38 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   input_text: Hello World
                   input_length: 11
                   algorithms_used:
-                  - sha256
-                  - md5
+                    - sha256
+                    - md5
                   hashes:
-                    sha256: a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
+                    sha256: >-
+                      a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
                     md5: b10a8db164e0754105b7a99be72e3fe5
                   hash_details:
-                  - algorithm: sha256
-                    hash: a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
-                    length: 64
-                    uppercase: A591A6D40BF420404A011733CFB7B190D62C65BF0BCDA32B57B277D9AD9F146E
-                  - algorithm: md5
-                    hash: b10a8db164e0754105b7a99be72e3fe5
-                    length: 32
-                    uppercase: B10A8DB164E0754105B7A99BE72E3FE5
-                  available_algorithms:
-                  - md5
-                  - sha1
-                  - sha256
-                  - sha384
-                  - sha512
-                  - blake2b512
-                  - blake2s256
+                    - algorithm: sha256
+                      hash: >-
+                        a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
+                      length: 64
+                      uppercase: >-
+                        A591A6D40BF420404A011733CFB7B190D62C65BF0BCDA32B57B277D9AD9F146E
+                    - algorithm: md5
+                      hash: b10a8db164e0754105b7a99be72e3fe5
+                      length: 32
+                      uppercase: B10A8DB164E0754105B7A99BE72E3FE5
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -94,4 +91,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
