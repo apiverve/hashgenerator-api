@@ -44,7 +44,10 @@ from apiverve_hashgenerator.apiClient import HashgeneratorAPIClient
 # Initialize the client with your APIVerve API key
 api = HashgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "algorithms": "all" }
+query = {
+    "text": "Hello World",
+    "algorithms": "all"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text": "Hello World", "algorithms": "all" }
+query = {
+    "text": "Hello World",
+    "algorithms": "all"
+}
 ```
 
 ###### Simple Request
@@ -152,7 +158,10 @@ from apiverve_hashgenerator.apiClient import HashgeneratorAPIClient, Hashgenerat
 
 api = HashgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "algorithms": "all" }
+query = {
+    "text": "Hello World",
+    "algorithms": "all"
+}
 
 try:
     result = api.execute(query)
@@ -173,7 +182,10 @@ from apiverve_hashgenerator.apiClient import HashgeneratorAPIClient, Hashgenerat
 
 api = HashgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "algorithms": "all" }
+query = {
+    "text": "Hello World",
+    "algorithms": "all"
+}
 
 try:
     result = api.execute(query)
@@ -207,7 +219,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_hashgenerator.apiClient import HashgeneratorAPIClient, HashgeneratorAPIClientError
 
-query = { "text": "Hello World", "algorithms": "all" }
+query = {
+    "text": "Hello World",
+    "algorithms": "all"
+}
 
 # Using context manager ensures proper cleanup
 with HashgeneratorAPIClient("[YOUR_API_KEY]") as api:
@@ -233,7 +248,10 @@ from apiverve_hashgenerator.apiClient import HashgeneratorAPIClient
 # Enable debug mode
 api = HashgeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text": "Hello World", "algorithms": "all" }
+query = {
+    "text": "Hello World",
+    "algorithms": "all"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -248,8 +266,12 @@ from apiverve_hashgenerator.apiClient import HashgeneratorAPIClient
 
 api = HashgeneratorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text": "Hello World",
+    "algorithms": "all"
+}
+
 try:
-    query = { "text": "Hello World", "algorithms": "all" }
     result = api.execute(query)
     print(result)
 finally:
