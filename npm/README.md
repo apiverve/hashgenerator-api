@@ -148,15 +148,6 @@ async function makeRequest() {
         "length": 32,
         "uppercase": "B10A8DB164E0754105B7A99BE72E3FE5"
       }
-    ],
-    "available_algorithms": [
-      "md5",
-      "sha1",
-      "sha256",
-      "sha384",
-      "sha512",
-      "blake2b512",
-      "blake2s256"
     ]
   }
 }
