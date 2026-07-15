@@ -4,33 +4,44 @@ declare module '@apiverve/hashgenerator' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface hashgeneratorResponse {
     status: string;
     error: string | null;
     data: HashGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface HashGeneratorData {
-      inputText:           string;
-      inputLength:         number;
-      algorithmsUsed:      string[];
-      hashes:              Hashes;
-      hashDetails:         HashDetail[];
-      availableAlgorithms: string[];
+      inputText:      null | string;
+      inputLength:    number | null;
+      algorithmsUsed: (null | string)[];
+      hashes:         Hashes;
+      hashDetails:    HashDetail[];
   }
   
   interface HashDetail {
-      algorithm: string;
-      hash:      string;
-      length:    number;
-      uppercase: string;
+      algorithm: null | string;
+      hash:      null | string;
+      length:    number | null;
+      uppercase: null | string;
   }
   
   interface Hashes {
-      sha256: string;
-      md5:    string;
+      sha256: null | string;
+      md5:    null | string;
   }
 
   export default class hashgeneratorWrapper {
