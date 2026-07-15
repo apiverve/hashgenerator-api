@@ -30,7 +30,12 @@ The Hash Generator API provides a simple, reliable way to integrate hash generat
 ```javascript
 async function callHashGeneratorAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/hashgenerator', {
+        const params = new URLSearchParams({
+            text: 'Hello World',
+            algorithms: 'sha256,md5'
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/hashgenerator?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +55,7 @@ callHashGeneratorAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/hashgenerator?param=value" \
+curl -X GET "https://api.apiverve.com/v1/hashgenerator?text=Hello%20World&algorithms=sha256%2Cmd5" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +155,7 @@ go get github.com/apiverve/hashgenerator-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +174,7 @@ go get github.com/apiverve/hashgenerator-api/go
 The Hash Generator API is commonly used for:
 
 - **Web Applications** - Add hash generator features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with hash generator capabilities
 - **Data Pipelines** - Process and analyze data at scale
