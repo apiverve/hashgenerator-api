@@ -25,6 +25,9 @@ namespace APIVerve.API.HashGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,7 +36,7 @@ namespace APIVerve.API.HashGenerator
         public string InputText { get; set; }
 
         [JsonProperty("input_length")]
-        public long InputLength { get; set; }
+        public long? InputLength { get; set; }
 
         [JsonProperty("algorithms_used")]
         public string[] AlgorithmsUsed { get; set; }
@@ -43,9 +46,6 @@ namespace APIVerve.API.HashGenerator
 
         [JsonProperty("hash_details")]
         public HashDetail[] HashDetails { get; set; }
-
-        [JsonProperty("available_algorithms")]
-        public string[] AvailableAlgorithms { get; set; }
     }
 
     public partial class HashDetail
@@ -57,7 +57,7 @@ namespace APIVerve.API.HashGenerator
         public string Hash { get; set; }
 
         [JsonProperty("length")]
-        public long Length { get; set; }
+        public long? Length { get; set; }
 
         [JsonProperty("uppercase")]
         public string Uppercase { get; set; }
@@ -70,5 +70,17 @@ namespace APIVerve.API.HashGenerator
 
         [JsonProperty("md5")]
         public string Md5 { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
