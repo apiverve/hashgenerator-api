@@ -192,11 +192,51 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Hash Generator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "input_text": "Hello World",
+    "input_length": 11,
+    "algorithms_used": [
+      "sha256",
+      "md5"
+    ],
+    "hashes": {
+      "sha256": "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e",
+      "md5": "b10a8db164e0754105b7a99be72e3fe5"
+    },
+    "hash_details": [
+      {
+        "algorithm": "sha256",
+        "hash": "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e",
+        "length": 64,
+        "uppercase": "A591A6D40BF420404A011733CFB7B190D62C65BF0BCDA32B57B277D9AD9F146E"
+      },
+      {
+        "algorithm": "md5",
+        "hash": "b10a8db164e0754105b7a99be72e3fe5",
+        "length": 32,
+        "uppercase": "B10A8DB164E0754105B7A99BE72E3FE5"
+      }
+    ]
+  }
 }
 ```
 
