@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/hashgenerator",
-  "version": "1.2.0",
-  "description": "Hash Generator is a tool for generating cryptographic hashes from text. It supports multiple algorithms including MD5, SHA-1, SHA-256, SHA-384, SHA-512, and BLAKE2 variants for data integrity and security applications.",
+  "version": "1.2.2",
+  "description": "Hash Generator computes cryptographic hashes for any text string across algorithms such as MD5, SHA-256, SHA-512, and BLAKE2. It outputs digests for single or multiple algorithms in one request.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "hash generator", "md5", "sha1", "sha256", "sha512"
+    "hash generator api", "hash api", "md5 hash api", "md5 hash generator api", "sha256 hash api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/hashgenerator-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/hashgenerator?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/hashgenerator?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
