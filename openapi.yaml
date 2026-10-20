@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: Hash Generator
   description: >-
-    Hash Generator is a tool for generating cryptographic hashes from text. It
-    supports multiple algorithms including MD5, SHA-1, SHA-256, SHA-384,
-    SHA-512, and BLAKE2 variants for data integrity and security applications.
+    Hash Generator computes cryptographic hashes for any text string across
+    algorithms such as MD5, SHA-256, SHA-512, and BLAKE2. It outputs digests for
+    single or multiple algorithms in one request.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/hashgenerator:
     get:
-      summary: Generate Hash
+      summary: Hash Generator
       description: Generate cryptographic hashes using multiple algorithms
       operationId: hashgenerator
       parameters:
@@ -64,16 +64,13 @@ paths:
                     - sha256
                     - md5
                   hashes:
-                    sha256: >-
-                      a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
+                    sha256: a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
                     md5: b10a8db164e0754105b7a99be72e3fe5
                   hash_details:
                     - algorithm: sha256
-                      hash: >-
-                        a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
+                      hash: a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e
                       length: 64
-                      uppercase: >-
-                        A591A6D40BF420404A011733CFB7B190D62C65BF0BCDA32B57B277D9AD9F146E
+                      uppercase: A591A6D40BF420404A011733CFB7B190D62C65BF0BCDA32B57B277D9AD9F146E
                     - algorithm: md5
                       hash: b10a8db164e0754105b7a99be72e3fe5
                       length: 32
