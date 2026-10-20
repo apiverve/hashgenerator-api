@@ -1,13 +1,12 @@
 Hash Generator API
 ============
 
-Hash Generator is a tool for generating cryptographic hashes from text. It supports multiple algorithms including MD5, SHA-1, SHA-256, SHA-384, SHA-512, and BLAKE2 variants for data integrity and security applications.
+Hash Generator computes cryptographic hashes for any text string across algorithms such as MD5, SHA-256, SHA-512, and BLAKE2. It outputs digests for single or multiple algorithms in one request.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Hash Generator API](https://apiverve.com/marketplace/hashgenerator?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-hashgenerator.svg)](https://pypi.org/project/apiverve-hashgenerator/)
+
+This is a Python wrapper for the [Hash Generator API](https://apiverve.com/marketplace/hashgenerator?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-hashgenerator
 
 ## Configuration
 
-Before using the hashgenerator API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Hash Generator API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -63,7 +62,7 @@ except Exception as e:
 
 ## Usage
 
-The Hash Generator API documentation is found here: [https://docs.apiverve.com/ref/hashgenerator](https://docs.apiverve.com/ref/hashgenerator?utm_source=pypi&utm_medium=readme).
+The Hash Generator API documentation is found here: [https://docs.apiverve.com/ref/hashgenerator](https://docs.apiverve.com/ref/hashgenerator?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -131,15 +130,6 @@ print(result)
         "length": 32,
         "uppercase": "B10A8DB164E0754105B7A99BE72E3FE5"
       }
-    ],
-    "available_algorithms": [
-      "md5",
-      "sha1",
-      "sha256",
-      "sha384",
-      "sha512",
-      "blake2b512",
-      "blake2s256"
     ]
   }
 }
@@ -283,7 +273,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -294,12 +284,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

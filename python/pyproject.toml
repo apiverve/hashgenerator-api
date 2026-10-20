@@ -1,13 +1,13 @@
 [project]
 name = "apiverve-hashgenerator"
-version = "1.1.14"
+version = "1.2.2"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Hash Generator is a tool for generating cryptographic hashes from text. It supports multiple algorithms including MD5, SHA-1, SHA-256, SHA-384, SHA-512, and BLAKE2 variants for data integrity and security applications."
-keywords = []
+description = "Hash Generator computes cryptographic hashes for any text string across algorithms such as MD5, SHA-256, SHA-512, and BLAKE2. It outputs digests for single or multiple algorithms in one request."
+keywords = ["hash generator api", "hash api", "md5 hash api", "md5 hash generator api", "sha256 hash api"]
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 license = {text = "MIT"}
 dependencies = [
     "requests>=2.25.0"
@@ -17,35 +17,13 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
-    "Intended Audience :: Financial and Insurance Industry",
-    "Intended Audience :: Healthcare Industry",
-    "Intended Audience :: Education",
-    "Intended Audience :: Science/Research",
-    "Intended Audience :: Information Technology",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Utilities",
-    "Topic :: Scientific/Engineering",
-    "Topic :: Education",
-    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
-    "Topic :: Internet :: WWW/HTTP :: Site Management",
     "Topic :: Internet :: WWW/HTTP",
-    "Topic :: Software Development :: Libraries",
-    "Topic :: Software Development :: Libraries :: Application Frameworks",
-    "Topic :: Internet",
-    "Topic :: Communications",
-    "Topic :: Office/Business",
-    "Topic :: Text Processing",
-    "Topic :: Security",
-    "Topic :: Database",
-    "Topic :: Software Development :: Code Generators",
-    "Topic :: Software Development :: Pre-processors",
-    "Topic :: Software Development :: Quality Assurance",
-    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "Natural Language :: English",
 ]
 
 [project.urls]
-Homepage = "https://apiverve.com?utm_source=pypi"
+Homepage = "https://apiverve.com/marketplace/hashgenerator?utm_source=pypi&utm_medium=referral&utm_content=homepage"
+Documentation = "https://docs.apiverve.com/ref/hashgenerator?utm_source=pypi&utm_medium=referral&utm_content=docs"
 Repository = "https://github.com/apiverve/hashgenerator-api"
-Documentation = "https://docs.apiverve.com/api/hashgenerator?utm_source=pypi"
 Twitter = "https://twitter.com/apivervehq"
