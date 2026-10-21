@@ -1,6 +1,6 @@
 # Hash Generator API - PHP Package
 
-Hash Generator is a tool for generating cryptographic hashes from text. It supports multiple algorithms including MD5, SHA-1, SHA-256, SHA-384, SHA-512, and BLAKE2 variants for data integrity and security applications.
+Hash Generator computes cryptographic hashes for any text string across algorithms such as MD5, SHA-256, SHA-512, and BLAKE2. It outputs digests for single or multiple algorithms in one request.
 
 ## Installation
 
@@ -107,11 +107,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/hashgenerator?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/hashgenerator?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/hashgenerator?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/hashgenerator?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/hashgenerator?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/hashgenerator?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
