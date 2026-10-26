@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/hashgenerator",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Hash Generator computes cryptographic hashes for any text string across algorithms such as MD5, SHA-256, SHA-512, and BLAKE2. It outputs digests for single or multiple algorithms in one request.",
   "main": "index.js",
   "types": "index.d.ts",
