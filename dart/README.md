@@ -1,11 +1,11 @@
 # Hash Generator API - Dart/Flutter Client
 
-Hash Generator is a tool for generating cryptographic hashes from text. It supports multiple algorithms including MD5, SHA-1, SHA-256, SHA-384, SHA-512, and BLAKE2 variants for data integrity and security applications.
+Hash Generator computes cryptographic hashes for any text string across algorithms such as MD5, SHA-256, SHA-512, and BLAKE2. It outputs digests for single or multiple algorithms in one request.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_hashgenerator.svg)](https://pub.dev/packages/apiverve_hashgenerator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Hash Generator API](https://apiverve.com/marketplace/hashgenerator?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Hash Generator API](https://apiverve.com/marketplace/hashgenerator?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_hashgenerator: ^1.1.14
+  apiverve_hashgenerator: ^1.2.4
 ```
 
 Then run:
@@ -76,15 +76,6 @@ void main() async {
         "length": 32,
         "uppercase": "B10A8DB164E0754105B7A99BE72E3FE5"
       }
-    ],
-    "available_algorithms": [
-      "md5",
-      "sha1",
-      "sha256",
-      "sha384",
-      "sha512",
-      "blake2b512",
-      "blake2s256"
     ]
   }
 }
@@ -92,12 +83,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [Hash Generator API](https://apiverve.com/marketplace/hashgenerator?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/hashgenerator](https://docs.apiverve.com/ref/hashgenerator?utm_source=dart&utm_medium=readme)
+- **API Home:** [Hash Generator API](https://apiverve.com/marketplace/hashgenerator?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/hashgenerator](https://docs.apiverve.com/ref/hashgenerator?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -105,4 +96,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)

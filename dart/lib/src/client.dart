@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// Hash Generator API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/hashgenerator?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/hashgenerator?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [text] (required) - Text to hash
